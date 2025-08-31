@@ -16,7 +16,7 @@ def stafflogin(request):
     return render(request,'stafflogin.html')
 def staffsignup(request):
     return render(request,'staffsignup.html')
-def dashboard(request):
+def dashboard(request): 
     if request.session.has_key('is_logged'):
         Book = AddBook.objects.all()
         return render(request,'dashboard.html',{'Book':Book})
