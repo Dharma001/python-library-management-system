@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-18T15:17:03.212890" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="C:\Dharma CDU\projects\pl\Authentication_Tests\01__Signup.robot">
+<kw name="Open Browser To Base URL" owner="Authentication_Resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.550441" elapsed="0.000105"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.550675" elapsed="0.000055"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.550824" elapsed="0.000054"/>
+</kw>
+<doc>Opens browser and navigates to the base URL</doc>
+<status status="PASS" start="2025-10-18T15:17:03.549876" elapsed="0.001051"/>
+</kw>
+<test id="s1-t1" name="Successful Signup With Valid Credentials" line="18">
+<kw name="Open Signup Page" owner="Authentication_Resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${SIGNUP_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.551812" elapsed="0.000041"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.551928" elapsed="0.000046"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sign Up</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.552061" elapsed="0.000075"/>
+</kw>
+<doc>Navigate to the signup page</doc>
+<status status="PASS" start="2025-10-18T15:17:03.551652" elapsed="0.000541"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.552736" elapsed="0.000111"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.552957" elapsed="0.000050"/>
+</kw>
+<arg>signup_page_before_valid</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.552515" elapsed="0.000534"/>
+</kw>
+<kw name="Input Signup Details" owner="Authentication_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.553692" elapsed="0.000069"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.553860" elapsed="0.000051"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD1}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.553980" elapsed="0.000051"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD2}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.554100" elapsed="0.000047"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Fill in signup form with provided details</doc>
+<status status="PASS" start="2025-10-18T15:17:03.553457" elapsed="0.000728"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.554679" elapsed="0.000070"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.554826" elapsed="0.000040"/>
+</kw>
+<arg>signup_form_filled_valid</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.554519" elapsed="0.000380"/>
+</kw>
+<kw name="Click Signup Button" owner="Authentication_Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${SIGNUP_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.555332" elapsed="0.000049"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.555454" elapsed="0.000038"/>
+</kw>
+<doc>Click the signup submit button</doc>
+<status status="PASS" start="2025-10-18T15:17:03.555204" elapsed="0.000319"/>
+</kw>
+<kw name="Verify Successful Signup" owner="Authentication_Resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.555960" elapsed="0.000033"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${SIGNUP_URL}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.556058" elapsed="0.000049"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<arg>error</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.556178" elapsed="0.000043"/>
+</kw>
+<doc>Verify that signup was successful</doc>
+<status status="PASS" start="2025-10-18T15:17:03.555818" elapsed="0.000434"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.556707" elapsed="0.000055"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.556835" elapsed="0.000046"/>
+</kw>
+<arg>signup_success</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.556557" elapsed="0.000357"/>
+</kw>
+<doc>Test successful user signup with valid username, email, and password</doc>
+<tag>critical</tag>
+<tag>positive</tag>
+<tag>signup</tag>
+<status status="PASS" start="2025-10-18T15:17:03.551005" elapsed="0.006185"/>
+</test>
+<test id="s1-t2" name="Signup Fails With Duplicate Username" line="40">
+<kw name="Open Signup Page" owner="Authentication_Resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${SIGNUP_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.558744" elapsed="0.000069"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.558913" elapsed="0.000952"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sign Up</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.560119" elapsed="0.000137"/>
+</kw>
+<doc>Navigate to the signup page</doc>
+<status status="PASS" start="2025-10-18T15:17:03.558507" elapsed="0.001869"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.561071" elapsed="0.000080"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.561241" elapsed="0.000045"/>
+</kw>
+<arg>signup_page_before_duplicate</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.560881" elapsed="0.000439"/>
+</kw>
+<kw name="Input Signup Details" owner="Authentication_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.561884" elapsed="0.000058"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.562017" elapsed="0.000054"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD1}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.562136" elapsed="0.000056"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD2}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.562282" elapsed="0.000047"/>
+</kw>
+<arg>${DUPLICATE_USERNAME}</arg>
+<arg>testuser002@example.com</arg>
+<arg>${VALID_PASSWORD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Fill in signup form with provided details</doc>
+<status status="PASS" start="2025-10-18T15:17:03.561690" elapsed="0.000678"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.562853" elapsed="0.000068"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.563004" elapsed="0.000042"/>
+</kw>
+<arg>signup_form_filled_duplicate</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.562662" elapsed="0.000417"/>
+</kw>
+<kw name="Click Signup Button" owner="Authentication_Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${SIGNUP_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.563550" elapsed="0.000046"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.563671" elapsed="0.000036"/>
+</kw>
+<doc>Click the signup submit button</doc>
+<status status="PASS" start="2025-10-18T15:17:03.563411" elapsed="0.000328"/>
+</kw>
+<kw name="Verify Signup Error" owner="Authentication_Resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${expected_error}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.564204" elapsed="0.000048"/>
+</kw>
+<arg>username already exists</arg>
+<doc>Verify that signup failed with error message</doc>
+<status status="PASS" start="2025-10-18T15:17:03.564050" elapsed="0.000239"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.564695" elapsed="0.000057"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.564836" elapsed="0.000040"/>
+</kw>
+<arg>signup_duplicate_error</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.564553" elapsed="0.000355"/>
+</kw>
+<doc>Test signup failure when attempting to register with an existing username</doc>
+<tag>duplicate</tag>
+<tag>negative</tag>
+<tag>signup</tag>
+<status status="PASS" start="2025-10-18T15:17:03.557993" elapsed="0.007216"/>
+</test>
+<test id="s1-t3" name="Signup Fails With Invalid Username" line="62">
+<kw name="Open Signup Page" owner="Authentication_Resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${SIGNUP_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.568200" elapsed="0.000138"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.568554" elapsed="0.000127"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sign Up</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.568844" elapsed="0.000114"/>
+</kw>
+<doc>Navigate to the signup page</doc>
+<status status="PASS" start="2025-10-18T15:17:03.567713" elapsed="0.001320"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.569767" elapsed="0.000064"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.569927" elapsed="0.000041"/>
+</kw>
+<arg>signup_page_before_invalid</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.569569" elapsed="0.000434"/>
+</kw>
+<kw name="Input Signup Details" owner="Authentication_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.570518" elapsed="0.000048"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.570631" elapsed="0.000040"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD1}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.570842" elapsed="0.000045"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD2}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.570946" elapsed="0.000039"/>
+</kw>
+<arg>${INVALID_USERNAME}</arg>
+<arg>testuser003@example.com</arg>
+<arg>${VALID_PASSWORD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Fill in signup form with provided details</doc>
+<status status="PASS" start="2025-10-18T15:17:03.570368" elapsed="0.000650"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.571467" elapsed="0.000056"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.571597" elapsed="0.000039"/>
+</kw>
+<arg>signup_form_filled_invalid</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.571316" elapsed="0.000353"/>
+</kw>
+<kw name="Click Signup Button" owner="Authentication_Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${SIGNUP_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.572097" elapsed="0.000053"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.572215" elapsed="0.000035"/>
+</kw>
+<doc>Click the signup submit button</doc>
+<status status="PASS" start="2025-10-18T15:17:03.571971" elapsed="0.000311"/>
+</kw>
+<kw name="Verify Signup Error" owner="Authentication_Resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${expected_error}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.572700" elapsed="0.000047"/>
+</kw>
+<arg>username must be at least</arg>
+<doc>Verify that signup failed with error message</doc>
+<status status="PASS" start="2025-10-18T15:17:03.572567" elapsed="0.000216"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.573576" elapsed="0.000115"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.573929" elapsed="0.000145"/>
+</kw>
+<arg>signup_invalid_username_error</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.573219" elapsed="0.000938"/>
+</kw>
+<doc>Test signup failure with invalid username (too short)</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-10-18T15:17:03.566405" elapsed="0.008384"/>
+</test>
+<test id="s1-t4" name="Signup Fails With Invalid Email Format" line="84">
+<kw name="Open Signup Page" owner="Authentication_Resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${SIGNUP_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.578105" elapsed="0.000055"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.578247" elapsed="0.000049"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sign Up</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.578361" elapsed="0.000041"/>
+</kw>
+<doc>Navigate to the signup page</doc>
+<status status="PASS" start="2025-10-18T15:17:03.577585" elapsed="0.000850"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.578969" elapsed="0.000057"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.579098" elapsed="0.000038"/>
+</kw>
+<arg>signup_page_before_invalid_email</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.578827" elapsed="0.000340"/>
+</kw>
+<kw name="Input Signup Details" owner="Authentication_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.579639" elapsed="0.000055"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.579790" elapsed="0.000101"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD1}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.580046" elapsed="0.000100"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD2}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.580609" elapsed="0.000200"/>
+</kw>
+<arg>testuser004</arg>
+<arg>${INVALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Fill in signup form with provided details</doc>
+<status status="PASS" start="2025-10-18T15:17:03.579483" elapsed="0.001476"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.582480" elapsed="0.000297"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.583657" elapsed="0.000135"/>
+</kw>
+<arg>signup_form_filled_invalid_email</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.581569" elapsed="0.002331"/>
+</kw>
+<kw name="Click Signup Button" owner="Authentication_Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${SIGNUP_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.584760" elapsed="0.000060"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.584899" elapsed="0.000043"/>
+</kw>
+<doc>Click the signup submit button</doc>
+<status status="PASS" start="2025-10-18T15:17:03.584538" elapsed="0.000532"/>
+</kw>
+<kw name="Verify Signup Error" owner="Authentication_Resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${expected_error}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.585652" elapsed="0.000050"/>
+</kw>
+<arg>Enter a valid email address</arg>
+<doc>Verify that signup failed with error message</doc>
+<status status="PASS" start="2025-10-18T15:17:03.585490" elapsed="0.000265"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.586229" elapsed="0.000060"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.586364" elapsed="0.000039"/>
+</kw>
+<arg>signup_invalid_email_error</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.586075" elapsed="0.000362"/>
+</kw>
+<doc>Test signup failure with invalid email format</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-10-18T15:17:03.576361" elapsed="0.010426"/>
+</test>
+<test id="s1-t5" name="Signup Fails With Password Mismatch" line="106">
+<kw name="Open Signup Page" owner="Authentication_Resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${SIGNUP_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.589151" elapsed="0.000197"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.589754" elapsed="0.000162"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sign Up</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.590264" elapsed="0.000078"/>
+</kw>
+<doc>Navigate to the signup page</doc>
+<status status="PASS" start="2025-10-18T15:17:03.588536" elapsed="0.001873"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.590989" elapsed="0.000089"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.591229" elapsed="0.000075"/>
+</kw>
+<arg>signup_page_before_password_mismatch</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.590778" elapsed="0.000576"/>
+</kw>
+<kw name="Input Signup Details" owner="Authentication_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.591890" elapsed="0.000061"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.592037" elapsed="0.000052"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD1}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.592165" elapsed="0.000050"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD2}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.592288" elapsed="0.000051"/>
+</kw>
+<arg>testuser005</arg>
+<arg>testuser005@example.com</arg>
+<arg>${VALID_PASSWORD}</arg>
+<arg>DifferentPassword123!</arg>
+<doc>Fill in signup form with provided details</doc>
+<status status="PASS" start="2025-10-18T15:17:03.591689" elapsed="0.000694"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.592944" elapsed="0.000058"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.593076" elapsed="0.000039"/>
+</kw>
+<arg>signup_form_filled_password_mismatch</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.592795" elapsed="0.000352"/>
+</kw>
+<kw name="Click Signup Button" owner="Authentication_Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${SIGNUP_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.593616" elapsed="0.000095"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.593825" elapsed="0.000053"/>
+</kw>
+<doc>Click the signup submit button</doc>
+<status status="PASS" start="2025-10-18T15:17:03.593485" elapsed="0.000459"/>
+</kw>
+<kw name="Verify Signup Error" owner="Authentication_Resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${expected_error}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.594635" elapsed="0.000174"/>
+</kw>
+<arg>password confirmation doesn't match</arg>
+<doc>Verify that signup failed with error message</doc>
+<status status="PASS" start="2025-10-18T15:17:03.594270" elapsed="0.000664"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.596095" elapsed="0.000128"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.596410" elapsed="0.000087"/>
+</kw>
+<arg>signup_password_mismatch_error</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.595523" elapsed="0.001033"/>
+</kw>
+<doc>Test signup failure when password confirmation doesn't match</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-10-18T15:17:03.587494" elapsed="0.009626"/>
+</test>
+<test id="s1-t6" name="Signup Fails With Weak Password" line="128">
+<kw name="Open Signup Page" owner="Authentication_Resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${SIGNUP_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.598824" elapsed="0.000047"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.599087" elapsed="0.000060"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Sign Up</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.599236" elapsed="0.000046"/>
+</kw>
+<doc>Navigate to the signup page</doc>
+<status status="PASS" start="2025-10-18T15:17:03.598649" elapsed="0.000671"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.599847" elapsed="0.000062"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.599992" elapsed="0.000044"/>
+</kw>
+<arg>signup_page_before_weak_password</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.599686" elapsed="0.000399"/>
+</kw>
+<kw name="Input Signup Details" owner="Authentication_Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.601097" elapsed="0.000124"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.601409" elapsed="0.000123"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD1}</arg>
+<arg>${password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.601690" elapsed="0.000064"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SIGNUP_PASSWORD2}</arg>
+<arg>${password2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.601852" elapsed="0.000073"/>
+</kw>
+<arg>testuser006</arg>
+<arg>testuser006@example.com</arg>
+<arg>${WEAK_PASSWORD}</arg>
+<arg>${WEAK_PASSWORD}</arg>
+<doc>Fill in signup form with provided details</doc>
+<status status="PASS" start="2025-10-18T15:17:03.600412" elapsed="0.001578"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.602829" elapsed="0.000095"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.603092" elapsed="0.000081"/>
+</kw>
+<arg>signup_form_filled_weak_password</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.602540" elapsed="0.000680"/>
+</kw>
+<kw name="Click Signup Button" owner="Authentication_Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${SIGNUP_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.603823" elapsed="0.000059"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.603967" elapsed="0.000045"/>
+</kw>
+<doc>Click the signup submit button</doc>
+<status status="PASS" start="2025-10-18T15:17:03.603623" elapsed="0.000428"/>
+</kw>
+<kw name="Verify Signup Error" owner="Authentication_Resources">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${expected_error}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.604558" elapsed="0.000051"/>
+</kw>
+<arg>password is too common</arg>
+<doc>Verify that signup failed with error message</doc>
+<status status="PASS" start="2025-10-18T15:17:03.604389" elapsed="0.000261"/>
+</kw>
+<kw name="Take Screenshot With Timestamp" owner="Authentication_Resources">
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.605120" elapsed="0.000062"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.605273" elapsed="0.000045"/>
+</kw>
+<arg>signup_weak_password_error</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:17:03.604969" elapsed="0.000385"/>
+</kw>
+<doc>Test signup failure with weak/simple password</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-10-18T15:17:03.597976" elapsed="0.007695"/>
+</test>
+<kw name="Close Test Browser" owner="Authentication_Resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-10-18T15:17:03.607222" elapsed="0.000088"/>
+</kw>
+<doc>Close the browser after test completion</doc>
+<status status="PASS" start="2025-10-18T15:17:03.606987" elapsed="0.000400"/>
+</kw>
+<doc>Robot Framework test cases for Signup page using SeleniumLibrary</doc>
+<status status="PASS" start="2025-10-18T15:17:03.215491" elapsed="0.391967"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">critical</stat>
+<stat pass="1" fail="0" skip="0">duplicate</stat>
+<stat pass="5" fail="0" skip="0">negative</stat>
+<stat pass="1" fail="0" skip="0">positive</stat>
+<stat pass="6" fail="0" skip="0">signup</stat>
+<stat pass="4" fail="0" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Signup" id="s1" pass="6" fail="0" skip="0">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

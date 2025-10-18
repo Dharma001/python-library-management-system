@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-18T15:17:16.422622" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="C:\Dharma CDU\projects\pl\Authentication_Tests\01__Signup.robot">
+<kw name="Open Browser To Base URL" owner="Authentication_Resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-18T15:17:16.827131" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<msg time="2025-10-18T15:18:49.029227" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-18T15:18:49.029669" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-10-18T15:17:16.826903" elapsed="92.208091">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-10-18T15:18:49.035219" elapsed="0.000038"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-10-18T15:18:49.035340" elapsed="0.000020"/>
+</kw>
+<doc>Opens browser and navigates to the base URL</doc>
+<status status="FAIL" start="2025-10-18T15:17:16.826350" elapsed="92.209155">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</kw>
+<test id="s1-t1" name="Successful Signup With Valid Credentials" line="18">
+<doc>Test successful user signup with valid username, email, and password</doc>
+<tag>critical</tag>
+<tag>positive</tag>
+<tag>signup</tag>
+<status status="FAIL" start="2025-10-18T15:18:49.035603" elapsed="0.000960">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</test>
+<test id="s1-t2" name="Signup Fails With Duplicate Username" line="40">
+<doc>Test signup failure when attempting to register with an existing username</doc>
+<tag>duplicate</tag>
+<tag>negative</tag>
+<tag>signup</tag>
+<status status="FAIL" start="2025-10-18T15:18:49.037788" elapsed="0.000712">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</test>
+<test id="s1-t3" name="Signup Fails With Invalid Username" line="62">
+<doc>Test signup failure with invalid username (too short)</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-10-18T15:18:49.039831" elapsed="0.000514">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</test>
+<test id="s1-t4" name="Signup Fails With Invalid Email Format" line="84">
+<doc>Test signup failure with invalid email format</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-10-18T15:18:49.041553" elapsed="0.000440">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</test>
+<test id="s1-t5" name="Signup Fails With Password Mismatch" line="106">
+<doc>Test signup failure when password confirmation doesn't match</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-10-18T15:18:49.044819" elapsed="0.000611">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</test>
+<test id="s1-t6" name="Signup Fails With Weak Password" line="128">
+<doc>Test signup failure with weak/simple password</doc>
+<tag>negative</tag>
+<tag>signup</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-10-18T15:18:49.046445" elapsed="0.000559">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</test>
+<kw name="Close Test Browser" owner="Authentication_Resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-18T15:18:49.049252" elapsed="2.334092"/>
+</kw>
+<doc>Close the browser after test completion</doc>
+<status status="PASS" start="2025-10-18T15:18:49.048809" elapsed="2.334757"/>
+</kw>
+<doc>Robot Framework test cases for Signup page using SeleniumLibrary</doc>
+<status status="FAIL" start="2025-10-18T15:17:16.426068" elapsed="94.957566">Suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=141.0.7390.66)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dbb3e9e5+80021]
+	GetHandleVerifier [0x0x7ff7dbb3ea40+80112]
+	(No symbol) [0x0x7ff7db8c060f]
+	(No symbol) [0x0x7ff7db8bd0bf]
+	(No symbol) [0x0x7ff7db8adae9]
+	(No symbol) [0x0x7ff7db8af94e]
+	(No symbol) [0x0x7ff7db8ae0d2]
+	(No symbol) [0x0x7ff7db8ad859]
+	(No symbol) [0x0x7ff7db8ad51d]
+	(No symbol) [0x0x7ff7db8ab08c]
+	(No symbol) [0x0x7ff7db8ab91c]
+	(No symbol) [0x0x7ff7db8c46da]
+	(No symbol) [0x0x7ff7db96a47e]
+	(No symbol) [0x0x7ff7db94122a]
+	(No symbol) [0x0x7ff7db96968a]
+	(No symbol) [0x0x7ff7db941003]
+	(No symbol) [0x0x7ff7db9095d1]
+	(No symbol) [0x0x7ff7db90a3f3]
+	GetHandleVerifier [0x0x7ff7dbdfdd8d+2960445]
+	GetHandleVerifier [0x0x7ff7dbdf804a+2936570]
+	GetHandleVerifier [0x0x7ff7dbe18a87+3070263]
+	GetHandleVerifier [0x0x7ff7dbb584ce+185214]
+	GetHandleVerifier [0x0x7ff7dbb5ff1f+216527]
+	GetHandleVerifier [0x0x7ff7dbb47c24+117460]
+	GetHandleVerifier [0x0x7ff7dbb47ddf+117903]
+	GetHandleVerifier [0x0x7ff7dbb2dcb8+11112]
+	BaseThreadInitThunk [0x0x7ffed75de8d7+23]
+	RtlUserThreadStart [0x0x7ffed8c88d9c+44]
+</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">critical</stat>
+<stat pass="0" fail="1" skip="0">duplicate</stat>
+<stat pass="0" fail="5" skip="0">negative</stat>
+<stat pass="0" fail="1" skip="0">positive</stat>
+<stat pass="0" fail="6" skip="0">signup</stat>
+<stat pass="0" fail="4" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Signup" id="s1" pass="0" fail="6" skip="0">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-18T15:26:36.827666" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo Screenshots" source="C:\Dharma CDU\projects\pl\Authentication_Tests\Demo_Screenshots.robot">
+<test id="s1-t1" name="Demo Screenshot Test" line="19">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-18T15:26:37.181121" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>${DEMO_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-18T15:26:37.180719" elapsed="5.445041"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-18T15:26:42.626317" elapsed="0.065321"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-18T15:26:42.692138" elapsed="0.002877"/>
+</kw>
+<kw name="Take Screenshot With Timestamp">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-10-18T15:26:42.696966" level="INFO">${timestamp} = 20251018_152642</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-10-18T15:26:42.696535" elapsed="0.000508"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-18T15:26:42.815165" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="demo_page_loaded_20251018_152642.png"&gt;&lt;img src="demo_page_loaded_20251018_152642.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T15:26:42.697241" elapsed="0.118031"/>
+</kw>
+<arg>demo_page_loaded</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:26:42.695871" elapsed="0.119505"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-18T15:26:44.816347" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-18T15:26:42.815717" elapsed="2.000777"/>
+</kw>
+<kw name="Take Screenshot With Timestamp">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-10-18T15:26:44.818014" level="INFO">${timestamp} = 20251018_152644</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-10-18T15:26:44.817669" elapsed="0.000379"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-18T15:26:44.916500" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="demo_page_ready_20251018_152644.png"&gt;&lt;img src="demo_page_ready_20251018_152644.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T15:26:44.818186" elapsed="0.098488"/>
+</kw>
+<arg>demo_page_ready</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:26:44.817072" elapsed="0.099754"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-18T15:26:44.935458" level="INFO">Current page contains text 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-18T15:26:44.917121" elapsed="0.018431"/>
+</kw>
+<kw name="Take Screenshot With Timestamp">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-10-18T15:26:44.936351" level="INFO">${timestamp} = 20251018_152644</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-10-18T15:26:44.936167" elapsed="0.000212"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-18T15:26:45.029450" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="demo_page_verified_20251018_152644.png"&gt;&lt;img src="demo_page_verified_20251018_152644.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${filename}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-18T15:26:44.936489" elapsed="0.093110"/>
+</kw>
+<arg>demo_page_verified</arg>
+<doc>Take screenshot with timestamp for reporting</doc>
+<status status="PASS" start="2025-10-18T15:26:44.935894" elapsed="0.093841"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-18T15:26:45.030076" elapsed="2.371906"/>
+</kw>
+<doc>Demonstrates Robot Framework screenshot capture functionality</doc>
+<tag>demo</tag>
+<tag>screenshot</tag>
+<status status="PASS" start="2025-10-18T15:26:37.178616" elapsed="10.224804"/>
+</test>
+<doc>Demo Robot Framework test to show screenshot functionality</doc>
+<status status="PASS" start="2025-10-18T15:26:36.829200" elapsed="10.575897"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">demo</stat>
+<stat pass="1" fail="0" skip="0">screenshot</stat>
+</tag>
+<suite>
+<stat name="Demo Screenshots" id="s1" pass="1" fail="0" skip="0">Demo Screenshots</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
